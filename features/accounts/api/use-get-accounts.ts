@@ -13,7 +13,6 @@ export const useGetAccounts = () => {
       }
 
       const { accounts } = await response.json();
-
       return accounts;
     }
   });
