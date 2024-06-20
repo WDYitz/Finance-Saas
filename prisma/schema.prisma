@@ -15,10 +15,10 @@ datasource db {
 }
 
 model Account {
-  id      Int    @id @default(autoincrement())
-  plaidId Int    @map("plaid_id")
+  id      String  @id @default(uuid())
+  plaidId String? @map("plaid_id")
   name    String
-  userId  Int    @map("user_id")
+  userId  String  @map("user_id")
 
   @@map("accounts")
 }
